@@ -1,205 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #FFB6C1;
+        border:10px solid white;
+        border-radius: 12px;
+        margin-top: 200px;
+        margin-bottom: 200px;
+        margin-right: 200px;
+        margin-left: 200px;
+        }
+        
+        * {
+        box-sizing: border-box ;
+        }
+		
+		h1 {
+			color: #DB7093;
+			font-size: 40px;
+			font-family:candara;
+			margin-top:0px
+        }
+        .container {
+            padding: 16px;
+            background-color: white;
+        }
+
+        input[type=text], input[type=password], input[type=date], select {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus, input[type=password], select :focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        .registerbtn {
+            background-color: #DB7093;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        .resetbtn {
+            background-color: #DB7093;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        .registerbtn:hover {
+            opacity: 1;
+        }
+        .resetbtn:hover {
+            opacity: 1;
+        }
+			
+	</style>
 </head>
     <body>
-        <form>
-            <table>
-                <tr>
-                    <td colspan="2"><h3>Registration Form</h3></td>
-                </tr>
-                <tr>
-                    <td> First Name</td>
-                    <td> <input type="text" name="firstname"</td>
-                </tr>
-                <tr>
-                    <td> Middle Name</td>
-                    <td> <input type="text" name="midname"</td>
-                </tr>
-                <tr>
-                    <td> Last Name</td>
-                    <td> <input type="text" name="lastname"</td>
-                </tr>
-                <tr>
-                    <td> Birthdate </td>
-                    <td> 
-                    <select name="birth_month">
-                        <option value="0">mm</option>
-                        <option value="1">Jan</option>
-                        <option value="2">Feb</option>
-                        <option value="3">Mar</option>
-                        <option value="4">Apr</option>
-                        <option value="5">May</option>
-                        <option value="6">Jun</option>
-                        <option value="7">Jul</option>
-                        <option value="8">Aug</option>
-                        <option value="9">Sep</option>
-                        <option value="10">Oct</option>
-                        <option value="11">Nov</option>
-                        <option value="12">Dec</option>
-                    </select>
-                        
-                    <select name="birth_date">
-                        <option value="0">dd</option> 
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                    </select>
-                    
-                    <select name="birth_year">
-                        <option value="0">yy</option>
-                        <option value="1">2022</option>
-                        <option value="2">2021</option>
-                        <option value="3">2020</option>
-                        <option value="4">2019</option>
-                        <option value="5">2018</option>
-                        <option value="6">2017</option>
-                        <option value="7">2016</option>
-                        <option value="8">2015</option>
-                        <option value="9">2014</option>
-                        <option value="10">2013</option>
-                        <option value="11">2012</option>
-                        <option value="12">2011</option>
-                        <option value="13">2010</option>
-                        <option value="14">2009</option>
-                        <option value="15">2008</option>
-                        <option value="16">2007</option>
-                        <option value="17">2006</option>
-                        <option value="18">2005</option>
-                        <option value="19">2004</option>
-                        <option value="20">2003</option>
-                        <option value="21">2002</option>
-                        <option value="22">2001</option>
-                        <option value="23">2000</option>
-                        <option value="24">1999</option>
-                    </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td> Contact </td>
-                    <td> <input type="text" name="contact"> </td>
-                </tr>
-                <tr>
-                    <td>Address</td>
-                    <td> <select name="adress_name">
-                        <option value="0">Province</option>
-                        <option value="1">Abra</option>
-                        <option value="2">Agusan Del Norte</option>
-                        <option value="3">Agusan Del Sur</option>
-                        <option value="4">Aklan</option>
-                        <option value="5">Albay</option>
-                        <option value="6">Antique</option>
-                        <option value="7">Apayao</option>
-                        <option value="8">Aurora</option>
-                        <option value="9">Basilan</option>
-                        <option value="10">Bataan</option>
-                        <option value="11">Batanes</option>
-                        <option value="12">Batangas</option>
-                        <option value="13">Benguet</option>
-                        <option value="14">Biliran</option>
-                        <option value="15">Bohol</option>
-                        <option value="16">Bukidnon</option>
-                        <option value="17">Bulacan</option>
-                        <option value="18">Cagayan</option>
-                        <option value="19">Camarines Norte</option>
-                        <option value="20">Camarines Sur</option>
-                        <option value="21">Camiguin</option>
-                        <option value="22">Capiz</option>
-                        <option value="23">Catanduanes</option>
-                        <option value="24">Cavite</option>
-                        <option value="25">Cebu</option>
-                        <option value="26">Cotabato</option>
-                        <option value="27">Davao de Oro</option>
-                        <option value="28">Davao del Norte</option>
-                        <option value="29">Davao del Sur</option>
-                        <option value="30">Davao del Occidental</option>
-                        <option value="31">Davao del Oriental</option>
-                        <option value="32">Dinagat Islands</option>
-                        <option value="33">Eastern Samar</option>
-                        <option value="34">Guimaras</option>
-                        <option value="35">Ifugao</option>
-                        <option value="36">Ilocos Norte</option>
-                        <option value="37">Ilocos Sur</option>
-                        <option value="38">Iloilo</option>
-                        <option value="39">Isabela</option>
-                        <option value="40">Kalinga</option>
-                        <option value="41">La Union</option>
-                        <option value="42">Laguna</option>
-                        <option value="43">Lanao del Norte</option>
-                        <option value="44">Lanao del Sur</option>
-                        <option value="45">Leyte</option>
-                        <option value="46">Maguindanao del Norte</option>
-                        <option value="47">Maguindanao del Sur</option>
-                        <option value="48">Marinduque</option>
-                        <option value="49">Masbate</option>
-                        <option value="50">Misamis Occidental</option>
-                        <option value="51">Misamis Oriental</option>
-                        <option value="52">Mountain Province</option>
-                        <option value="53">Negros Occidental</option>
-                        <option value="54">Negros Oriental</option>
-                        <option value="55">Northern Samar</option>
-                        <option value="56">Nueva Ecija</option>
-                        <option value="57">Nueva Viscaya</option>
-                        <option value="58">Occidental Mindoro</option>
-                        <option value="59">Oriental Mindoro</option>
-                        <option value="60">Palawan</option>
-                        <option value="61">Pampanga</option>
-                        <option value="62">Pangasinan</option>
-                        <option value="63">Quezon</option>
-                        <option value="64">Quirino</option>
-                        <option value="65">Rizal</option>
-                        <option value="66">Romblon</option>
-                        <option value="67">Samar</option>
-                        <option value="68">Sarangani</option>
-                        <option value="69">Siguijor</option>
-                        <option value="70">Sorsogon</option>
-                        <option value="71">South Cotabato</option>
-                        <option value="72">Southern Leyte</option>
-                        <option value="73">Sultan Kudarat</option>
-                        <option value="74">Sulu</option>
-                        <option value="75">Surigao del Norte</option>
-                        <option value="76">Surigao del Sur</option>
-                        <option value="77">Tarlac</option>
-                        <option value="78">Tawi-Tawi</option>
-                        <option value="79">Zambales</option>
-                        <option value="80">Zamboanga del Norte</option>
-                        <option value="81">Zamboanga del Sur</option>
-                        <option value="82">Zamboanga Sibugay</option>
-                        <option value="83">Metro Manila</option>
-                    </select></td>
-                </tr>
-            </table>
-        
-        
+        <form method="get" action="auth_login.html">
+            <div class="container">
+                <h1><center>⋆｡°✩ Register Now! ⋆｡°✩</center></h1>
+                <p><center>Please fill in this form to create an account. <3 </center></p>
+                <hr>
+
+                <label for="First Name"><b>First Name</b></label>
+                <input type="text" placeholder="First Name" name="firstname" required>
+                
+                <label for="Middle Name"><b>Middle Name</b></label>
+                <input type="text" placeholder="Middle Name" name="midname" required>
+                
+                <label for="Last Name"><b>Last Name</b></label>
+                <input type="text" placeholder="Last Name" name="lastname" required>
+                
+                <label for="Date of Birth"><b>Date of Birth</b></label>
+                <input type="date" placeholder="Date of Birth" name="birthdate" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                <hr>
+                <p><center>By creating an account you agree to our <a href="#">Terms & Privacy</a></center></p>
+
+                <button type="submit" class="registerbtn">Register</button>
+            </div>
         </form>
     </body>
 </html>
