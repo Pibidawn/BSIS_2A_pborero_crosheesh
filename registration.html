@@ -2,16 +2,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/b647652911.js" crossorigin="anonymous"></script>
     <style type="text/css">
         body {
         font-family: Arial, Helvetica, sans-serif;
         background-color: #FFB6C1;
-        border:10px solid white;
+        border:10px solid floralwhite;
         border-radius: 12px;
-        margin-top: 200px;
-        margin-bottom: 200px;
-        margin-right: 200px;
-        margin-left: 200px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 100px;
+        margin-left: 100px;
         }
         
         * {
@@ -19,14 +20,92 @@
         }
 		
 		h1 {
-			color: #DB7093;
+			color: lightcoral;
 			font-size: 40px;
 			font-family:candara;
 			margin-top:0px
         }
-        .container {
+        .content{
+           margin: auto;
+            padding: 15px;
+            max-width: 800px;
+            text-align: center;
+        }
+        .dpx{
+            display:flex;
+            align-items:center;
+            justify-content:space-around;
+        }
+        h1{
+            font-size:28px;
+            line-height:28px;
+            margin-bottom:15px;
+        }
+        label{
+            display:block;
+            line-height:40px;
+        }
+        .option-input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            position: relative;
+            top: 13.33333px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 40px;
+            width: 40px;
+            transition: all 0.15s ease-out 0s;
+            background: #cbd1d8;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 0.5rem;
+            outline: none;
+            position: relative;
+            z-index: 1000;
+        }
+        .option-input:hover {
+            background: #9faab7;
+        }
+        .option-input:checked {
+    background: lighcoral;
+        }
+        .option-input:checked::before {
+    width: 40px;
+    height: 40px;
+    display:flex;
+    content: '\f00c';
+    font-size: 25px;
+    font-weight:bold;
+    position: absolute;
+    align-items:center;
+    justify-content:center;
+    font-family:'Font Awesome 5 Free';
+        }
+        .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+        }
+        .option-input.radio {
+    border-radius: 50%;
+        }
+        .option-input.radio::after {
+    border-radius: 50%;
+        }
+        .container{
             padding: 16px;
-            background-color: white;
+            background-color: floralwhite;
         }
 
         input[type=text], input[type=password], input[type=date], select {
@@ -35,19 +114,19 @@
             margin: 5px 0 22px 0;
             display: inline-block;
             border: none;
-            background: #f1f1f1;
+            background-color: antiquewhite;
         }
 
-        input[type=text]:focus, input[type=password], select :focus {
-            background-color: #ddd;
+        input[type=text]:focus, input[type=password], input[type=radio], select :focus {
+            background-color: antiquewhite;
             outline: none;
         }
         hr {
-            border: 1px solid #f1f1f1;
+            border: 1px solid antiquewhite;
             margin-bottom: 25px;
         }
         .registerbtn {
-            background-color: #DB7093;
+            background-color: lightcoral;
             color: white;
             padding: 16px 20px;
             margin: 8px 0;
@@ -57,7 +136,7 @@
             opacity: 0.9;
         }
         .resetbtn {
-            background-color: #DB7093;
+            background-color: lightcoral;
             color: white;
             padding: 16px 20px;
             margin: 8px 0;
@@ -93,7 +172,27 @@
                 
                 <label for="Date of Birth"><b>Date of Birth</b></label>
                 <input type="date" placeholder="Date of Birth" name="birthdate" required>
-
+                
+                <label for="Gender"><b>Gender</b></label>
+                <label>
+                    <input type="radio" class="option-input radio" name="example" checked />
+                    Male
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" name="example" /> Female
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" name="example" /> Prefer not to say </label>
+            
+                <label for="address"><b>Complete Address</b></label>
+                <input type="text" placeholder="Complete Address" name="address" required>
+                
+                <label for="contact"><b>Contact Number</b></label>
+                <input type="text" placeholder="Contact Number" name="contact" required>
+                
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
