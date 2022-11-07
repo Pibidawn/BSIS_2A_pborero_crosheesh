@@ -1,32 +1,93 @@
 <DOCTYPE!>
 <html>
 	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/b647652911.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        body {
+        background-image: url('1.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 250px 250px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #FFB6C1;
+        border:20px solid floralwhite;
+        border-radius: 12px;
+        margin-top: 250px;
+        margin-bottom: 300px;
+        margin-right: 300px;
+        margin-left: 300px;
+        }
+        
+        * {
+        box-sizing: border-box ;
+        }
+		
+		h1 {
+			color: lightcoral;
+			font-size: 30px;
+			font-family:candara;
+			margin-top:0px
+        }
+        
+        .container{
+            padding: 20px;
+            background-color: floralwhite;
+        }
+            input[type=text], input[type=password], input[type=date], select {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background-color: antiquewhite;
+        }
 
+        input[type=text]:focus, input[type=password], input[type=radio], select :focus {
+            background-color: antiquewhite;
+            outline: none;
+        }
+        button {
+            background-color: #F08080;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    
+        hr {
+            border: 1px solid antiquewhite;
+            margin-bottom: 25px;
+        }
+	</style>
 	</head>
 	<body>
 		<form method="get" action="auth_login.html">
-			<table id="Loginform">
-				<tr>
-					<td colspan="2"> <h3>Login</h3> </td>
-				</tr>
-				<tr>
-					<td> Username </td>
-					<td> <input type-"text"/> </td>
-				</tr>
-				<tr>
-					<td> Password </td>
-					<td> <input name="password" type="password"/> </td>
-				</tr>
-				<tr>
-					<td> <a href="registration.html"> Register Here </a> </td>
-					<td> <input type="submit" name="submit_login"/> </td>
-				</tr>
-                <tr>
-                    <td colspan="2" >Forgot password? <a href="forgotpassword.html">Click Here</a>
-                    </td>
-                </tr>
-			</table>
+            <div class="container">
+            <h1><center>⋆｡°✩ Log in now! ⋆｡°✩</center></h1>
+                <p><center>Please fill in this form to access your account.</center></p>
+                <hr>
+                
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+                
+                <button type="submit">Login</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <hr>
+                <span class="uname">Don't have an account? <a href="registration.html">Register now!</a></span>
+            </div>
 		</form>
-	</body>
-						
+	</body>				
 </html>
